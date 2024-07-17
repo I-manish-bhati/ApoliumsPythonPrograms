@@ -1,5 +1,5 @@
 amount = int(input('Enter the amount : '))
-amount1 = int(input('Enter the amount : '))
+
 count500= int(amount/500)
 print('500 = ',count500)
 amount=amount%500
@@ -21,8 +21,3 @@ amount=amount%10
 count5=int(amount/5)
 print('5 = ',count5)
 
-notes=(500,200,100,50,20,10,5)
-for i in notes:
-    count=int(amount1/i)
-    print('Notes of ',i,' : ',count)
-    amount1=amount1%i
