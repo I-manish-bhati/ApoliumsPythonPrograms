@@ -1,19 +1,26 @@
-n=int(input("Enter the length of the track : "))
-k=int(input("Enter the best speed stretch(in meters) : "))
-n=n*1000
-girls=(2,4,8,1,2,1,8)
-gap=int(n//len(girls))
-print(len(girls))
-z=int(k//gap)
-print("Z",z)
-m=0
-a,sum=0,0
-for j in range(a,z):
-    sum+=girls[j]
-for i in range(z,len(girls)):
-    if sum>m:
-        m=sum
-    sum=sum-girls[a]+girls[z]
-    a+=1
-print(m)
-    
+def func(n,k,g,tst):
+    for i in range(len(n)):
+        sm,a,m=0,0,0
+        gap=round(n[i]/len(g[i]))
+        for j in range(0,k[i]):
+            sm=sum(g[i][:k[i]])
+        for l in range(k[i],len(g[i])):
+            if l==len(g[i]):
+                break
+            else:
+                if sm>m:
+                    m=sm
+                sm+=g[i][l]-g[i][a]
+        if k[i]==len(g[i]):
+            m=sm
+        if m==tst[i]:
+            print("Test ",i+1," Passed sucessfully")
+        else:
+            print("Test ",i+1,"Failed")
+
+n=[7,5,6,4]
+k=[2,3,2,4]
+g=[[2,4,8,1,2,1,8],[5,3,9,2,4],[1,1,1,1,1,1],[10,20,30,40]]
+tst=[12,17,2,100]
+func(n,k,g,tst)
+
