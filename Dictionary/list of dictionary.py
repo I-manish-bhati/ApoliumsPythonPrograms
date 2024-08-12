@@ -50,15 +50,15 @@ flag=0
 for i in range(len(mainl)):
     #mainl[i]["Actor"]
     #print(mainl[i]["Actor"][4]["Actor"][1])
+
     """if "Salman" in mainl[i]["Actor"] or "Salman" in mainl[i]["Actor"][4]["Actor"]:
         if mainl[i]["Year"]>2012 and mainl[i]["Year"]<=2015 or mainl[i]["Actor"][4]["Year"]>2012 and mainl[i]["Actor"][4]["Year"]<=2015:
             print(mainl[i]["Name"])"""
             
-    for j in range(len(mainl[i]["Actor"])):
+
                
-        if mainl[i]["Actor"][j]=="Salman" or mainl[i]["Actor"][4]["Actor"][j]:
-            if mainl[i]["Year"]>2012 and mainl[i]["Year"]<2015 or mainl[i]["Actor"][4]["Year"]>2012 and mainl[i]["Actor"][4]["Year"]<2015:
-                flag=1
-    if flag==1:
-        print(mainl[i]["Name"])
+    if mainl[i]["Actor"]=="Salman" or mainl[i]["Actor"][4]["Actor"]:
+        if mainl[i]["Year"]>2012 and mainl[i]["Year"]<2015 or mainl[i]["Actor"][4]["Year"]>2012 and mainl[i]["Actor"][4]["Year"]<2015:
+            print(mainl[i]["Name"])
+ 
     
